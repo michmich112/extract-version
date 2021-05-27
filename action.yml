@@ -1,0 +1,23 @@
+name: 'Extract Version'
+description: 'Bumps version on request before PR merge'
+author: 'Michel Cantacuzene'
+branding:
+  icon: 'hash'
+  color: 'blue'
+inputs:
+  scheme: # scheme to use
+    description: 'Versioning scheme to use'
+    required: true
+  version-file:
+    description: "File containing the current version. Can be in stringified JSON format for accessor information"
+    required: true
+  version-line:
+    description: 'List of identifiers to files containing version information to be bumped. Must be in stringified JSON format.'
+    required: false
+outputs:
+  version:
+    description: 'Version found in specified file'
+    # value: ${{ steps.extract-version.version.outputs.version }}
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

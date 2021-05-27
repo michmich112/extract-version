@@ -1,0 +1,26 @@
+{
+  "name": "extract-version",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.8",
+    "jest": "^25.2.4",
+    "@types/jest": "^25.1.4",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "verbose": true,
+    "rootDir": "dist"
+  }
+}
