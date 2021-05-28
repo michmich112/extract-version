@@ -138,6 +138,7 @@ function main() {
         const schemeRegExp = generateSchemeRegexp(options.schema);
         const version = yield getCurrentVersion(options, schemeRegExp);
         console.info(`[SUCCESS] - found version ${version}`);
+        core.setOutput('version', version);
         return version;
     });
 }
@@ -145,5 +146,6 @@ main()
     .then(version => version)
     .catch(e => {
     core.error(e);
+    core.setFailed(e.message);
     return FAILURE;
 });
