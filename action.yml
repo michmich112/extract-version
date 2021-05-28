@@ -5,7 +5,7 @@ branding:
   icon: 'hash'
   color: 'blue'
 inputs:
-  scheme: # scheme to use
+  schema: # scheme to use
     description: 'Versioning scheme to use'
     required: true
   version-file:
