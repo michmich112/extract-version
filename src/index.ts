@@ -99,13 +99,12 @@ async function main() {
   const schemeRegExp = generateSchemeRegexp(options.schema);
   const version = await getCurrentVersion(options, schemeRegExp);
   console.info(`[SUCCESS] - found version ${version}`);
-  core.setOutput('version', version);
   return version;
 }
 
 
 main()
-  .then(version => version)
+  .then(version => core.setOutput('version',version))
   .catch(e => {
     core.error(e);
     core.setFailed(e.message);
