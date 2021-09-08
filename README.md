@@ -62,3 +62,7 @@ Example: `major.minor.build[-patch][->dev]`
 ## More examples
 To see more examples, check out [version-bumper](https://github.com/michmich112/version-bumper) which automatically bumps 
 your versions based on the branching model you define and customize.
+
+## Notes
+This action uses the `gh-action-stats` package to track usage. See the data collected at [gh-action-stats-js](https://github.com/michmich112/gh-action-stats-js).
+

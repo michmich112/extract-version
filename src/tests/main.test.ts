@@ -1,4 +1,4 @@
-import { getCurrentVersion, generateSchemeRegexp } from "../index";
+import { generateSchemeRegexp } from "../utils";
 
 describe("Generate Regular expression from scheme description", () => {
   describe("General semantic cases: major.minor.build", () => {

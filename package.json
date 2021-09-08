@@ -1,6 +1,6 @@
 {
   "name": "extract-version",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.6"
+    "@actions/core": "^1.2.6",
+    "gh-action-stats": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "^13.9.8",
