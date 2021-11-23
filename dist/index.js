@@ -34,22 +34,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(require("@actions/core"));
 const utils_1 = require("./utils");
 const gh_action_stats_1 = __importDefault(require("gh-action-stats"));
-const FAILURE = 1;
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        gh_action_stats_1.default(); // collect the stats of the action run
-        const options = utils_1.getActionOptions();
-        Object.freeze(options);
-        const schemeRegExp = utils_1.generateSchemeRegexp(options.schema);
-        const version = yield utils_1.getCurrentVersion(options, schemeRegExp);
-        console.info(`[SUCCESS] - found version ${version}`);
-        return version;
+        try {
+            const options = utils_1.getActionOptions();
+            Object.freeze(options);
+            const schemeRegExp = utils_1.generateSchemeRegexp(options.schema);
+            const version = yield utils_1.getCurrentVersion(options, schemeRegExp);
+            console.info(`[SUCCESS] - found version ${version}`);
+            core.setOutput('version', version);
+        }
+        catch (e) {
+            core.error(e);
+            core.setFailed(e.message);
+            throw e;
+        }
     });
 }
-main()
-    .then(version => core.setOutput('version', version))
-    .catch(e => {
-    core.error(e);
-    core.setFailed(e.message);
-    return FAILURE;
-});
+gh_action_stats_1.default(main);
