@@ -1,6 +1,4 @@
 # Extract-Version
-<p align=center><img src="https://actions.boringday.co/api/badge?owner=michmich112&repo=extract-version&metric=repos" /></p>
-
 ![repos](https://actions.boringday.co/api/badge?owner=michmich112&repo=extract-version&metric=repos)
 ---
 Extract version from any file by specifying the version schema and where to find it.
