@@ -1,5 +1,6 @@
 # Extract-Version
-![repos](https://actions.boringday.co/api/badge?owner=michmich112&repo=extract-version&metric=repos)
+![total runs](https://actions.boringday.co/api/badge?owner=michmich112&repo=extract-version&metric=runs)
+![repos using this action](https://actions.boringday.co/api/badge?owner=michmich112&repo=extract-version&metric=repos)
 ---
 Extract version from any file by specifying the version schema and where to find it.
 The extracted version is returned as output for you to use in your GitHub actions workflow.
