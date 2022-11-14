@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "gh-action-stats": "0.0.9"
+    "gh-action-stats": "0.0.10"
   },
   "devDependencies": {
     "@types/node": "^13.9.8",
